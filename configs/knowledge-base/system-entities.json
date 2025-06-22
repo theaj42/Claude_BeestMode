@@ -1,0 +1,117 @@
+[
+  {
+    "name": "Claude Desktop Setup System",
+    "entityType": "System",
+    "observations": [
+      "Complete installation system for Claude Desktop with essential MCP servers",
+      "Provides single-command setup for productive AI collaboration",
+      "Includes core productivity pod: CLI, filesystem, memory, time, calendar, Git MCP servers",
+      "Non-destructive configuration management with backup and merge capabilities",
+      "Comprehensive validation system with health checks and troubleshooting",
+      "Modular platform support starting with macOS, expanding to Windows/Linux",
+      "Creates organized workspace at /Users/$username/ClaudeDesktop with Git-initialized repositories",
+      "Enables immediate productive work without technical exploration phase"
+    ]
+  },
+  {
+    "name": "MCP Server Ecosystem",
+    "entityType": "Technology",
+    "observations": [
+      "Model Context Protocol (MCP) servers extend Claude's capabilities",
+      "CLI MCP server provides system command execution capabilities",
+      "Filesystem MCP server enables file operations with scoped access control",
+      "Memory MCP server provides persistent knowledge graph storage between sessions",
+      "Time MCP server offers temporal awareness and timezone handling",
+      "Calendar MCP server integrates with system calendars for schedule management",
+      "Git MCP server enables version control operations and repository management",
+      "Servers communicate via JSON-RPC over stdio for security and reliability",
+      "Each server runs in isolated process with specific capability scope"
+    ]
+  },
+  {
+    "name": "Installation Process",
+    "entityType": "Procedure",
+    "observations": [
+      "Single command execution: ./install.sh with optional parameters",
+      "Environment detection: Verifies Claude Desktop installation and system requirements",
+      "User interaction: Prompts for filesystem access path and additional permissions",
+      "Configuration backup: Saves existing claude_desktop_config.json with timestamp",
+      "MCP server installation: Handles both Python (uvx) and Node.js (npx) packages",
+      "Configuration merge: Intelligently combines new settings with existing setup",
+      "Workspace creation: Establishes organized directory structure with Git repositories",
+      "Validation testing: Comprehensive health checks for all installed components",
+      "Troubleshooting support: AI-assisted debugging with full system access"
+    ]
+  },
+  {
+    "name": "Filesystem Access Scope",
+    "entityType": "Security",
+    "observations": [
+      "Default workspace: /Users/$username/ClaudeDesktop with organized subdirectories",
+      "Projects directory: Git-initialized for development work and collaboration",
+      "Documents directory: For file management and document processing",
+      "Scripts directory: Git-initialized for automation and utility scripts",
+      "Logs directory: System and application logging for troubleshooting",
+      "User-configurable additional paths during installation",
+      "Scoped access prevents unauthorized file system operations",
+      "Security model balances functionality with protection"
+    ]
+  },
+  {
+    "name": "Validation System",
+    "entityType": "Quality Assurance",
+    "observations": [
+      "Post-installation health checks for all MCP servers",
+      "Interactive test conversation exercising each server capability",
+      "Automated validation script for system integrity",
+      "Time check and timezone validation",
+      "File creation, writing, and reading tests",
+      "Knowledge graph entity creation and retrieval verification",
+      "Calendar access and functionality confirmation",
+      "Git repository initialization and basic operation tests",
+      "CLI command execution validation",
+      "Overall system health summary and status reporting"
+    ]
+  },
+  {
+    "name": "Best Practices Framework",
+    "entityType": "Methodology",
+    "observations": [
+      "Context management: When and how to update knowledge graph effectively",
+      "Session boundaries: Maintaining productive context across conversations",
+      "Information architecture: Structuring knowledge for optimal retrieval",
+      "Collaboration patterns: Effective communication strategies with AI",
+      "System optimization: Customizing setup for individual workflow needs",
+      "Automation development: Building workflows using MCP ecosystem",
+      "Troubleshooting approach: Systematic problem-solving with AI assistance",
+      "Evolution strategy: Growing system capabilities based on usage patterns"
+    ]
+  },
+  {
+    "name": "Troubleshooting Framework",
+    "entityType": "Support System",
+    "observations": [
+      "Self-service troubleshooting guide with common issues and solutions",
+      "AI-assisted debugging through pre-written diagnostic prompts",
+      "Full system access for Claude to diagnose and fix configuration issues",
+      "Comprehensive logging system for installation and runtime issues",
+      "Configuration recovery procedures for rollback scenarios",
+      "Platform-specific troubleshooting for macOS, Windows, and Linux",
+      "Community support integration for shared problem-solving",
+      "Escalation paths for complex technical issues"
+    ]
+  },
+  {
+    "name": "User Profile Template",
+    "entityType": "Configuration",
+    "observations": [
+      "Personal context: Name, role, primary use cases, technical comfort level",
+      "Work environment: Industry, tools, collaboration patterns, security requirements",
+      "Productivity goals: Task management, automation priorities, workflow optimization",
+      "Communication preferences: Response style, detail level, interaction patterns",
+      "Learning style: Documentation preferences, example types, guidance level",
+      "System customization: Additional MCP servers, workspace organization, automation needs",
+      "Success metrics: Productivity improvements, time savings, quality enhancements"
+    ]
+  }
+]
