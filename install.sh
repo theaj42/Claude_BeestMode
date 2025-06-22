@@ -20,7 +20,7 @@ LOG_FILE="$HOME/claude-desktop-setup.log"
 
 # Logging function
 log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "${HOME:-/tmp}/claude-desktop-setup.log" 2>/dev/null || true
 }
 
 # Error handling
@@ -283,7 +283,7 @@ main() {
     echo -e "${NC}"
     echo
     
-    log "Starting Claude Desktop Setup installation"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "${HOME:-/tmp}/claude-desktop-setup.log" 2>/dev/null || true
     
     # Run installation steps
     check_claude_desktop

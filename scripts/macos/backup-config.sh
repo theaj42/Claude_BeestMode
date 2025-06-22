@@ -16,7 +16,7 @@ CLAUDE_CONFIG_PATH="$HOME/Library/Application Support/Claude/claude_desktop_conf
 BACKUP_DIR="$HOME/.claude-desktop-backups"
 
 log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$HOME/claude-desktop-setup.log"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "${HOME:-/tmp}/claude-desktop-setup.log" 2>/dev/null || true
 }
 
 success() {

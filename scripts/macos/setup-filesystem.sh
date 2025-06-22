@@ -13,7 +13,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$HOME/claude-desktop-setup.log"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "${HOME:-/tmp}/claude-desktop-setup.log" 2>/dev/null || true
 }
 
 success() {
@@ -119,7 +119,7 @@ Thumbs.db
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
+*\$py.class
 *.so
 .Python
 env/
