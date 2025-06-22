@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "cli-mcp-server": {
+      "command": "uvx",
+      "args": ["cli-mcp-server"],
+      "env": {
+        "ALLOW_SHELL_OPERATORS": "true"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/$USERNAME/ClaudeDesktop"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+    "time": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-time"]
+    },
+    "mcp-ical": {
+      "command": "uvx",
+      "args": ["mcp-ical"]
+    },
+    "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git", "--repository", "/Users/$USERNAME/ClaudeDesktop"]
+    }
+  }
+}
