@@ -283,7 +283,7 @@ main() {
     echo -e "${NC}"
     echo
     
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "${HOME:-/tmp}/claude-desktop-setup.log" 2>/dev/null || true
+    log "Starting Claude Desktop Setup installation"
     
     # Run installation steps
     check_claude_desktop
