@@ -73,10 +73,10 @@ check_requirements() {
         error_exit "Node.js is required but not installed. Please install Node.js from https://nodejs.org/"
     fi
     
-    # Check for uvx
+    # Check for uvx (part of uv)
     if ! command -v uvx &> /dev/null; then
-        warn "uvx not found. Installing uvx..."
-        pip3 install uvx || error_exit "Failed to install uvx"
+        warn "uvx not found. Installing uv (which provides uvx)..."
+        pip3 install uv || error_exit "Failed to install uv"
     fi
     
     success "System requirements satisfied"
