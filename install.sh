@@ -188,7 +188,7 @@ install_mcp_servers() {
     info "Installing core MCP servers..."
     
     # Install Python-based servers via uvx
-    local python_servers=("cli-mcp-server" "mcp-ical" "mcp-server-git")
+    local python_servers=("cli-mcp-server" "mcp-ical" "mcp-server-git" "mcp-server-time")
     for server in "${python_servers[@]}"; do
         info "Installing $server..."
         if uvx install "$server"; then

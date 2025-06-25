@@ -53,8 +53,8 @@ Only install if you're comfortable with Claude having these capabilities. Always
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/claude-desktop-setup.git
-cd claude-desktop-setup
+git clone https://github.com/theaj42/Claude_BeestMode.git
+cd Claude_BeestMode
 
 # Run the installer
 ./install.sh

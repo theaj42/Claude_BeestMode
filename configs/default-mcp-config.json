@@ -16,8 +16,8 @@
       "args": ["-y", "@modelcontextprotocol/server-memory"]
     },
     "time": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-time"]
+      "command": "uvx",
+      "args": ["mcp-server-time"]
     },
     "mcp-ical": {
       "command": "uvx",
