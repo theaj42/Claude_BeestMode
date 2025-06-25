@@ -153,9 +153,10 @@ The core servers were chosen for maximum productivity impact:
 
 ### Getting Help
 
-1. **Check the logs**: `~/claude-desktop-setup.log`
-2. **Run validation**: `./scripts/common/validation-functions.sh complete`
-3. **Ask Claude**: With filesystem access, Claude can help troubleshoot issues directly
+1. **Check the FAQ**: [Frequently Asked Questions](./docs/FAQ.md)
+2. **Check the logs**: `~/claude-desktop-setup.log`
+3. **Run validation**: `./scripts/common/validation-functions.sh complete`
+4. **Ask Claude**: With filesystem access, Claude can help troubleshoot issues directly
 
 ## Development Roadmap
 
