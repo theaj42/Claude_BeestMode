@@ -40,6 +40,17 @@ This installer bridges the gap between sophisticated AI automation and mainstrea
 
 ### Installation
 
+⚠️ **IMPORTANT SAFETY WARNING** ⚠️
+
+This installer gives Claude the ability to:
+- **Create, modify, and DELETE files** in designated directories
+- **Execute system commands** (if you enable CLI access)
+- **Make permanent changes** to your filesystem
+
+Only install if you're comfortable with Claude having these capabilities. Always maintain backups of important data.
+
+---
+
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/claude-desktop-setup.git

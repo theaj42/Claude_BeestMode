@@ -1,0 +1,111 @@
+{
+  "entities": [
+    {
+      "name": "Claude Desktop Setup System",
+      "entityType": "System",
+      "observations": [
+        "This system was installed using the Claude BeestMode setup tool",
+        "Configuration is stored at ~/Library/Application Support/Claude/claude_desktop_config.json",
+        "The main workspace is located at ~/ClaudeDesktop with subdirectories for projects, documents, scripts, and logs",
+        "All file operations are scoped to permitted directories for security",
+        "The system includes CLI access, filesystem access, memory persistence, time awareness, calendar integration, and Git support"
+      ]
+    },
+    {
+      "name": "Context Management Best Practices",
+      "entityType": "Methodology",
+      "observations": [
+        "Always start new conversations by checking for existing context: 'What do you remember about our current project?'",
+        "Important decisions should be both remembered AND written to files for redundancy",
+        "Create a context.md or README.md file in each project to maintain project state",
+        "At the end of work sessions, ask Claude to create session notes summarizing accomplishments",
+        "Use 'Remember that...' for important facts you want to persist across conversations",
+        "Check remembered context with 'What do you know about...' queries",
+        "Context can include: project goals, technical decisions, personal preferences, work patterns",
+        "Regular context maintenance prevents drift and confusion in long-running projects"
+      ]
+    },
+    {
+      "name": "Safety Protocols",
+      "entityType": "Protocol",
+      "observations": [
+        "CLI access allows system command execution - be cautious with rm, delete, or modification commands",
+        "Always maintain backups of important files outside the Claude-accessible directories",
+        "Use Git to track changes in projects for easy rollback if needed",
+        "Before destructive operations, ask Claude to explain what will happen",
+        "Start with test projects before working with important data",
+        "The phrase 'Show me what you'll do before doing it' helps prevent accidents",
+        "File deletions are permanent unless you have backups or Git history"
+      ]
+    },
+    {
+      "name": "Productive Workflow Patterns",
+      "entityType": "Methodology",
+      "observations": [
+        "Natural language works best - describe what you want rather than trying to use specific commands",
+        "Break complex tasks into smaller steps for better results",
+        "Use 'Create a project called X' to set up new organized workspaces",
+        "Combine multiple tools: 'Create a Git repository and add a README with project goals'",
+        "Session notes pattern: End sessions with 'Summarize what we did today in session-notes.md'",
+        "Context loading pattern: Start sessions with 'Read the README in my current project'",
+        "Ask for help when stuck: 'What's the best way to...' or 'How would you approach...'",
+        "Iterate quickly - Claude can modify files based on feedback"
+      ]
+    },
+    {
+      "name": "Common Use Cases",
+      "entityType": "Examples",
+      "observations": [
+        "Personal journaling: Daily entries with automated organization and search",
+        "Project management: Task lists, progress tracking, documentation",
+        "Learning notes: Organized study materials with summaries and reviews",
+        "Code development: Full programming projects with Git integration",
+        "Data analysis: CSV processing, data cleaning, simple analytics",
+        "Automation scripts: Repetitive task automation with Python or shell scripts",
+        "Content creation: Blog posts, documentation, creative writing",
+        "Personal databases: Contact lists, book libraries, recipe collections"
+      ]
+    },
+    {
+      "name": "User Preferences",
+      "entityType": "Configuration",
+      "observations": [
+        "This is a safe space to store user-specific preferences",
+        "Example: 'Remember that I prefer Python over JavaScript'",
+        "Example: 'Remember that I like detailed explanations'",
+        "Example: 'Remember that I work on projects in the evening'",
+        "Example: 'Remember that I'm learning programming'",
+        "Claude will use these preferences to tailor responses",
+        "Preferences can be updated: 'Update my preference: I now prefer concise answers'",
+        "Check current preferences: 'What preferences have I told you about?'"
+      ]
+    },
+    {
+      "name": "Troubleshooting Guide",
+      "entityType": "Resource",
+      "observations": [
+        "If Claude can't find files: Verify the correct directory and check accessible paths",
+        "If memory seems lost: Ask 'What do you remember about X?' to check specific topics",
+        "If commands fail: Check that Claude Desktop was restarted after installation",
+        "If file operations are denied: Ensure the directory is in the allowed list",
+        "For Git issues: Make sure Git is installed on your system",
+        "For calendar issues: Check that calendar permissions are granted",
+        "When in doubt: Ask Claude to diagnose: 'Why might X not be working?'",
+        "Last resort: Check ~/claude-desktop-setup.log for error messages"
+      ]
+    },
+    {
+      "name": "Quick Command Reference",
+      "entityType": "Reference",
+      "observations": [
+        "File operations: 'Create/Read/Update/Delete file X', 'List files in Y', 'Search for Z'",
+        "Memory operations: 'Remember that...', 'What do you know about...', 'Forget about...'",
+        "Git operations: 'Initialize git', 'Commit changes', 'Show git status', 'Create branch'",
+        "Project setup: 'Create project X', 'Set up folder structure for Y'",
+        "Context management: 'Summarize our work', 'Create session notes', 'Read context file'",
+        "Safety checks: 'What would happen if...', 'Show me before doing it', 'Is this safe?'",
+        "Help: 'How do I...', 'What's the best way to...', 'Explain how X works'"
+      ]
+    }
+  ]
+}

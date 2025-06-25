@@ -118,9 +118,30 @@ git pull
 
 ---
 
+## Want Step-by-Step Instructions?
+
+Some users prefer talking to Claude to figure things out, while others want clear instructions. We've created a [Getting Started Guide](./getting-started-guide.md) with:
+- Step-by-step first tasks
+- Context management strategies  
+- Building confidence week by week
+- Quick reference card to print out
+
 ## Still have questions?
 
 Feel free to:
 1. Ask Claude directly - it can often help troubleshoot issues
-2. Check the [troubleshooting guide](./troubleshooting.md)
-3. Open an issue on the [GitHub repository](https://github.com/theaj42/Claude_BeestMode)
+2. Check the [Getting Started Guide](./getting-started-guide.md) for structured learning
+3. Review the [troubleshooting guide](./troubleshooting.md)
+4. Open an issue on the [GitHub repository](https://github.com/theaj42/Claude_BeestMode)
+
+---
+
+### ⚠️ Final Warning ⚠️
+
+*In the tradition of mystical tomes where warnings come last...*
+
+By completing this installation, you have granted Claude powers over your filesystem. Within the directories you specified, Claude can create, modify, and permanently delete files. The CLI server, if enabled, can execute system commands with your user privileges.
+
+With great power comes great responsibility. Always maintain backups. Start with test projects. And remember - Claude is here to help, but it will do exactly what you ask, even if that's not quite what you meant.
+
+*You have been warned.* 🧙‍♂️

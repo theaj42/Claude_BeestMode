@@ -25,6 +25,16 @@ def load_system_entities():
         
         print(f"Loading {len(entities_data)} system entities into knowledge graph...")
         
+        # Also load starter knowledge if it exists
+        starter_file = os.path.join(script_dir, 'starter-knowledge.json')
+        if os.path.exists(starter_file):
+            print(f"\nLoading starter knowledge...")
+            with open(starter_file, 'r') as f:
+                starter_data = json.load(f)
+                if 'entities' in starter_data:
+                    entities_data.extend(starter_data['entities'])
+                    print(f"Added {len(starter_data['entities'])} starter knowledge entities")
+        
         # Create a prompt for Claude to execute the knowledge graph creation
         claude_prompt = """Claude, please load the following pre-configured system entities into the knowledge graph:
 
