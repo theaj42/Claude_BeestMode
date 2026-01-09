@@ -1,0 +1,32 @@
+# AI Assistant Configuration
+# Copy this file to settings.yaml and customize for your environment
+
+# Root directory for your personal data ("Fuel")
+# This is where context, memory, and logs will be stored.
+# Keeping this separate from the code allows you to update the engine without losing data.
+data_root: "~/ai-data"
+
+# Path to your Obsidian vault (optional)
+# Used for reading daily notes and task databases.
+obsidian_vault: "~/Documents/Obsidian/MyVault"
+
+# API Keys (optional overrides - prefer using .env files or environment variables)
+# openai_api_key: "sk-..."
+# anthropic_api_key: "sk-..."
+
+# Agent Preferences
+agents:
+  default_model: "gpt-4o"
+  cost_conscious_model: "gpt-4o-mini"
+  
+# Memory Settings
+memory:
+  # 'chromadb' or 'json'
+  backend: "chromadb" 
+  # Path is relative to data_root unless absolute
+  path: "memory/chromadb"
+
+# Logging
+logging:
+  level: "INFO"
+  save_to_file: true

@@ -1,3 +1,19 @@
+# Claude BeestMode (v2.0)
+
+**A production-grade AI Assistant Engine and MCP Server Installer.**
+
+## 🚀 New in v2.0: The Engine
+
+We've added a portable, privacy-first **AI Agent Engine** based on the architecture used in a production environment. 
+
+### Key Features
+*   **Engine vs. Fuel Separation**: The logic (`engine/`) is kept separate from your personal data (`~/ai-data`), making upgrades safe and easy.
+*   **Self-Contained Agents**: Includes production-ready Python agents (e.g., `task_extractor`) that can run locally.
+*   **Portable Configuration**: No more hardcoded paths. Configure your data location in `config/settings.yaml`.
+*   **Bootstrap Templates**: Quickly load your context into Claude using `bootstrap/context_template.md`.
+
+---
+
 # Claude Desktop Setup - Easy Button Installation
 
 **Create a pre-configured Claude Desktop environment with essential MCP servers for productive AI collaboration from day one.**
@@ -8,7 +24,12 @@ This installer bridges the gap between sophisticated AI automation and mainstrea
 
 ## What You Get
 
-### Core MCP Server Pod
+### 1. The AI Engine (New)
+*   **Python Agent Framework**: Run autonomous agents locally.
+*   **Task Extraction**: Automatically parse your notes into Todoist tasks.
+*   **Knowledge Synthesis**: (Coming soon) Summarize your daily activities.
+
+### 2. Core MCP Server Pod
 - **CLI Access**: Direct system command execution
 - **Filesystem**: Scoped file operations and management  
 - **Memory**: Persistent knowledge graph across sessions
@@ -16,7 +37,7 @@ This installer bridges the gap between sophisticated AI automation and mainstrea
 - **Calendar**: Apple Calendar integration
 - **Git**: Version control operations
 
-### Organized Workspace
+### 3. Organized Workspace
 ```
 /Users/username/ClaudeDesktop/
 ├── projects/    (Git-initialized for development)
@@ -24,12 +45,6 @@ This installer bridges the gap between sophisticated AI automation and mainstrea
 ├── scripts/     (Git-initialized for automation)
 └── logs/        (System and error logs)
 ```
-
-### Smart Configuration Management
-- Non-destructive installation (backs up existing configs)
-- Intelligent configuration merging
-- Easy rollback and troubleshooting
-- AI-assisted problem solving through filesystem access
 
 ## Quick Start
 
@@ -56,118 +71,33 @@ Only install if you're comfortable with Claude having these capabilities. Always
 git clone https://github.com/theaj42/Claude_BeestMode.git
 cd Claude_BeestMode
 
-# Run the installer
+# 1. Setup Configuration
+cp config/settings.example.yaml config/settings.yaml
+# Edit config/settings.yaml to point to your data
+
+# 2. Run the MCP Installer
 ./install.sh
 ```
-
-The installer will:
-1. Check your system and existing Claude Desktop installation
-2. Ask about filesystem access preferences
-3. Backup your current configuration
-4. Install and configure core MCP servers
-5. Create organized workspace structure
-6. Validate the complete setup
 
 ### After Installation
 
 1. **Restart Claude Desktop** to load the new configuration
-2. **Test the setup**: Ask Claude "What MCP servers do I have available?"
-3. **Explore your workspace**: "What's in my ClaudeDesktop directory?"
-4. **Start collaborating**: "Help me organize a new project"
+2. **Bootstrap Context**:
+   * Copy `bootstrap/context_template.md` to your data repo (e.g., `~/ai-data/bootstrap.md`).
+   * Tell Claude: "Load context from @~/ai-data/bootstrap.md".
 
-## What Makes This Different
+## Architecture: Engine vs. Fuel
 
-### For Users
-- **Zero technical exploration required** - productive from day one
-- **Curated server selection** - essential tools without bloat
-- **Guided onboarding** - clear next steps and usage examples
-- **Safety first** - non-destructive installation with easy rollback
+This repository follows a strict separation of concerns:
 
-### For Developers
-- **Modular architecture** - easy to extend and customize
-- **Cross-platform foundation** - Windows/Linux support planned
-- **Comprehensive validation** - automated testing and health checks
-- **Community-friendly** - clear contribution guidelines
+*   **The Engine (This Repo)**: Contains the code, agents, tools, and installers. It is stateless and safe to update/pull.
+*   **The Fuel (Your Data)**: Your personal markdown notes, memory database, and logs. This should live in a separate private repository (e.g., `~/ai-data` or `~/obsidian/Vault`).
 
-## Architecture
+Configure the location of your "Fuel" in `config/settings.yaml`.
 
-### Installation Strategy
-- Shell script approach for maximum compatibility
-- Modular platform-specific implementations
-- Dependency management for both Python (uvx) and Node.js (npx) servers
-- Intelligent configuration merging with backup/restore
+## Advanced Usage & Agents
 
-### MCP Server Selection
-The core servers were chosen for maximum productivity impact:
-- **CLI + Filesystem**: Direct system interaction
-- **Memory**: Persistent context across sessions  
-- **Time + Calendar**: Temporal awareness and scheduling
-- **Git**: Version control integration
-
-### Security & Scoping
-- Filesystem access limited to designated workspace
-- User controls additional directory permissions
-- All operations logged for accountability
-- Git repositories track all changes
-
-## Advanced Usage
-
-### Manual Server Management
-```bash
-# Install additional MCP servers
-./scripts/macos/install-mcp-servers.sh python your-server-name
-
-# Backup current configuration
-./scripts/macos/backup-config.sh backup
-
-# Validate installation health
-./scripts/common/validation-functions.sh health
-```
-
-### Workspace Management
-```bash
-# Setup custom workspace location
-./scripts/macos/setup-filesystem.sh /your/custom/path
-
-# Validate workspace structure
-./scripts/macos/setup-filesystem.sh /your/path validate
-```
-
-### Troubleshooting
-```bash
-# Full system validation
-./scripts/common/validation-functions.sh complete
-
-# Quick health check
-./scripts/common/validation-functions.sh health
-
-# Test MCP connectivity
-./scripts/common/validation-functions.sh mcp
-```
-
-## Troubleshooting
-
-### Common Issues
-
-**Claude Desktop not found**
-- Install Claude Desktop from https://claude.ai/download
-
-**uvx not available**
-- Install with: `pip3 install uvx`
-
-**Permission errors**
-- Ensure user has write access to configuration directory
-
-**MCP servers not loading**
-- Restart Claude Desktop after installation
-- Check configuration with: `./scripts/macos/backup-config.sh validate`
-
-### Getting Help
-
-1. **Check the FAQ**: [Frequently Asked Questions](./docs/FAQ.md)
-2. **Check the logs**: `~/claude-desktop-setup.log`
-3. **Run validation**: `./scripts/common/validation-functions.sh complete`
-4. **Ask Claude**: With filesystem access, Claude can help troubleshoot issues directly
+See `engine/README.md` (coming soon) for details on running the Python agents directly.
 
 ## Development Roadmap
 
@@ -175,66 +105,14 @@ The core servers were chosen for maximum productivity impact:
 - [x] macOS installation script
 - [x] MCP server automation
 - [x] Configuration backup/merge
-- [x] Directory structure creation
-- [x] Comprehensive validation framework
 
-### Phase 2: Knowledge Base & Documentation ✅ COMPLETE
-- [x] Pre-configured knowledge graph (8 system entities)
-- [x] Installation guide with troubleshooting
-- [x] Usage guide with practical examples
-- [x] Best practices documentation
-- [x] AI-assisted troubleshooting framework
-
-### Phase 3: Validation & Testing (Ready to Start)
-- [ ] Automated post-installation validation script
-- [ ] Interactive test conversation refinement
-- [ ] Automated health check system
-- [ ] User onboarding conversation template
-
-### Phase 4: Platform Expansion
-- [ ] Windows installation script
-- [ ] Linux installation script
-- [ ] Cross-platform compatibility testing
-- [ ] Platform-specific documentation
-
-### Phase 5: Polish & Launch
-- [ ] GitHub repository connection
-- [ ] Video walkthrough
-- [ ] Community beta testing
-- [ ] Release preparation and announcement
+### Phase 2: The AI Engine ✅ IN PROGRESS
+- [x] Portable Agent Architecture
+- [x] Task Extractor Agent
+- [x] Configuration Abstraction
+- [ ] Knowledge Synthesizer Port
+- [ ] Memory System Port
 
 ## Contributing
 
-This project welcomes contributions! Areas where help is especially valuable:
-
-- **Windows/Linux support** - adapting scripts for other platforms
-- **Additional MCP servers** - curating valuable servers for inclusion
-- **Documentation** - screenshots, examples, troubleshooting guides
-- **Testing** - validation across different system configurations
-
-## Technical Details
-
-### Supported Platforms
-- macOS (current)
-- Windows (planned Phase 4)
-- Linux (planned Phase 4)
-
-### Dependencies
-- Python 3.8+ (for uvx and Python MCP servers)
-- Node.js 16+ (for Node.js MCP servers)
-- Git (for repository initialization)
-- jq (optional, for JSON validation)
-
-### Configuration Location
-- macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
-
-### Default Workspace
-- `~/ClaudeDesktop/` (customizable during installation)
-
-## License
-
-MIT License - see LICENSE file for details.
-
----
-
-**Questions?** Open an issue or ask Claude directly - with filesystem access, Claude can help troubleshoot and improve the setup!
+This project welcomes contributions!
